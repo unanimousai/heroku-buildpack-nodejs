@@ -1,11 +1,9 @@
 create_default_env() {
-  export NPM_CONFIG_PRODUCTION=${NPM_CONFIG_PRODUCTION:-true}
+  export NPM_CONFIG_PRODUCTION=${NPM_CONFIG_PRODUCTION:-false}
   export NPM_CONFIG_LOGLEVEL=${NPM_CONFIG_LOGLEVEL:-error}
   export NODE_MODULES_CACHE=${NODE_MODULES_CACHE:-true}
-  export NODE_ENV=${NODE_ENV:-production}
-  export NODE_VERBOSE=${NODE_VERBOSE:-false}
+  export NODE_ENV=${NODE_ENV:-development}
 }
-
 list_node_config() {
   echo ""
   printenv | grep ^NPM_CONFIG_ || true
